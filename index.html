@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <!-- 
+
+      Message Sent!
+      Thanks for completing the form. We'll be in touch soon!
+  
+  -->
+    <!-- main container -->
+    <main class="main__container">
+      <!-- form heading -->
+      <h1 class="main__container__title">Contact Us</h1>
+
+      <!-- form -->
+      <form class="main__container__form" method="get" action="/">
+        <!-- first name -->
+        <div class="form__group">
+          <label for="first-name"
+            >First Name <span class="required">*</span></label
+          >
+          <input
+            id="first-name"
+            class="form__input"
+            type="text"
+            placeholder="First Name"
+            name="first-name"
+            aria-invalid="false"
+            aria-describedby="name-error"
+          />
+          <span id="name-error"></span>
+        </div>
+
+        <!-- last name -->
+        <div class="form__group">
+          <label for="last-name"
+            >Last Name <span class="required">*</span></label
+          >
+          <input
+            id="last-name"
+            class="form__input"
+            type="text"
+            placeholder="Last Name"
+            name="last-name"
+            aria-invalid="false"
+            aria-describedby="name-error"
+          />
+          <span id="name-error"></span>
+        </div>
+
+        <!-- email -->
+        <div class="form__group form__group__email">
+          <label for="email"
+            >Email Address <span class="required">*</span></label
+          >
+          <input
+            id="email"
+            class="form__input"
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            autocomplete="email"
+            aria-invalid="false"
+            aria-describedby="email-error"
+          />
+          <span id="email-error"></span>
+        </div>
+
+        <!-- query type -->
+        <fieldset
+          class="form__group form__group__fieldset"
+          aria-invalid="false"
+          aria-describedby="query-type-error"
+        >
+          <legend class="form__group__fieldset__heading">
+            Query Type <span class="required">*</span>
+          </legend>
+          <p class="sr-only">Use arrow keys to navigate between options</p>
+          <div class="form__group__fieldset__radio__box">
+            <input
+              type="radio"
+              id="general-enquiry"
+              name="query-type"
+              value="general enquiry"
+            />
+            <label for="general-enquiry">General Enquiry</label>
+          </div>
+          <div class="form__group__fieldset__radio__box">
+            <input
+              type="radio"
+              id="support-request"
+              name="query-type"
+              value="support request"
+            />
+            <label for="support-request">Support Request</label>
+          </div>
+          <span id="query-type-error"></span>
+        </fieldset>
+
+        <!-- message -->
+        <div class="form__group form__group__message">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea
+            id="message"
+            class="form__textarea"
+            placeholder="Message"
+            name="message"
+            aria-invalid="false"
+            aria-describedby="message-error"
+          ></textarea>
+          <span id="message-error"></span>
+        </div>
+
+        <!-- consent -->
+        <div class="form__group__checkbox">
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            aria-invalid="false"
+            aria-describedby="consent-error"
+          />
+          <label for="consent"
+            >I consent to being contacted by the team
+            <span class="required">*</span></label
+          >
+          <span id="consent-error"></span>
+        </div>
+
+        <!-- submit button -->
+        <button class="form__button" type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
