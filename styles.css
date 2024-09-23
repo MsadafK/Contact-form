@@ -106,6 +106,10 @@ body {
   padding: 0.5em;
   border-radius: 5px;
 }
+.form__group__fieldset__radio__box label {
+  display: inline-block;
+  cursor: pointer;
+}
 .form__group__checkbox {
   gap: 0.5em;
 }
