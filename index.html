@@ -42,10 +42,12 @@
             type="text"
             placeholder="First Name"
             name="first-name"
+            autocomplete="given-name"
             aria-invalid="false"
             aria-describedby="fname-error"
+            required
           />
-          <span id="fname-error"></span>
+          <span id="fname-error" aria-live="polite"></span>
         </div>
 
         <!-- last name -->
@@ -59,10 +61,12 @@
             type="text"
             placeholder="Last Name"
             name="last-name"
+            autocomplete="family-name"
             aria-invalid="false"
             aria-describedby="lname-error"
+            required
           />
-          <span id="lname-error"></span>
+          <span id="lname-error" aria-live="polite"></span>
         </div>
 
         <!-- email -->
@@ -79,15 +83,15 @@
             autocomplete="email"
             aria-invalid="false"
             aria-describedby="email-error"
+            required
           />
-          <span id="email-error"></span>
+          <span id="email-error" aria-live="polite"></span>
         </div>
 
         <!-- query type -->
         <fieldset
           class="form__group form__group__fieldset"
           aria-invalid="false"
-          aria-describedby="query-type-error"
         >
           <legend class="form__group__fieldset__heading">
             Query Type <span class="required">*</span>
@@ -99,6 +103,8 @@
               id="general-enquiry"
               name="query-type"
               value="general enquiry"
+              aria-describedby="query-type-error"
+              required
             />
             <label for="general-enquiry">General Enquiry</label>
           </div>
@@ -108,10 +114,12 @@
               id="support-request"
               name="query-type"
               value="support request"
+              aria-describedby="query-type-error"
+              required
             />
             <label for="support-request">Support Request</label>
           </div>
-          <span id="query-type-error"></span>
+          <span id="query-type-error" aria-live="polite"></span>
         </fieldset>
 
         <!-- message -->
@@ -124,8 +132,9 @@
             name="message"
             aria-invalid="false"
             aria-describedby="message-error"
+            required
           ></textarea>
-          <span id="message-error"></span>
+          <span id="message-error" aria-live="polite"></span>
         </div>
 
         <!-- consent -->
@@ -136,12 +145,13 @@
             name="consent"
             aria-invalid="false"
             aria-describedby="consent-error"
+            required
           />
           <label for="consent"
             >I consent to being contacted by the team
             <span class="required">*</span></label
           >
-          <span id="consent-error"></span>
+          <span id="consent-error" aria-live="polite"></span>
         </div>
 
         <!-- submit button -->
